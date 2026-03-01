@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GardenMate – Konto löschen</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=DM+Serif+Display&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --green-dark: #1a3a2a;
+            --green-mid: #2d6a4f;
+            --green-light: #52b788;
+            --green-pale: #d8f3dc;
+            --cream: #f8f6f0;
+            --cream-dark: #ede9e0;
+            --text: #1a2e1a;
+            --text-muted: #5a6e5a;
+            --white: #ffffff;
+            --red-soft: #d64545;
+            --red-bg: #fef2f2;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'DM Sans', sans-serif;
+            background: var(--cream);
+            color: var(--text);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Header */
+        header {
+            background: var(--green-dark);
+            padding: 1.25rem 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .logo-icon {
+            width: 36px;
+            height: 36px;
+            background: var(--green-light);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+        }
+
+        header h1 {
+            font-family: 'DM Serif Display', serif;
+            color: var(--white);
+            font-size: 1.35rem;
+            font-weight: 400;
+            letter-spacing: 0.02em;
+        }
+
+        /* Main */
+        main {
+            flex: 1;
+            max-width: 560px;
+            width: 100%;
+            margin: 0 auto;
+            padding: 2.5rem 1.5rem 3rem;
+        }
+
+        .page-title {
+            font-family: 'DM Serif Display', serif;
+            font-size: 1.75rem;
+            font-weight: 400;
+            color: var(--green-dark);
+            margin-bottom: 0.75rem;
+        }
+
+        .page-subtitle {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            line-height: 1.6;
+            margin-bottom: 2rem;
+        }
+
+        /* Info Box */
+        .info-box {
+            background: var(--green-pale);
+            border-left: 3px solid var(--green-mid);
+            border-radius: 0 8px 8px 0;
+            padding: 1rem 1.25rem;
+            margin-bottom: 2rem;
+        }
+
+        .info-box h3 {
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--green-dark);
+            margin-bottom: 0.4rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .info-box p {
+            font-size: 0.88rem;
+            color: var(--green-dark);
+            line-height: 1.55;
+        }
+
+        /* Warning Box */
+        .warning-box {
+            background: var(--red-bg);
+            border-left: 3px solid var(--red-soft);
+            border-radius: 0 8px 8px 0;
+            padding: 1rem 1.25rem;
+            margin-bottom: 2rem;
+        }
+
+        .warning-box h3 {
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--red-soft);
+            margin-bottom: 0.4rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .warning-box ul {
+            font-size: 0.88rem;
+            color: #4a2020;
+            line-height: 1.7;
+            padding-left: 1.1rem;
+        }
+
+        /* Form */
+        .form-group {
+            margin-bottom: 1.25rem;
+        }
+
+        label {
+            display: block;
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--text);
+            margin-bottom: 0.4rem;
+        }
+
+        label .required {
+            color: var(--red-soft);
+        }
+
+        input[type="email"],
+        textarea {
+            width: 100%;
+            padding: 0.75rem 1rem;
+            border: 1.5px solid var(--cream-dark);
+            border-radius: 8px;
+            font-family: 'DM Sans', sans-serif;
+            font-size: 0.95rem;
+            color: var(--text);
+            background: var(--white);
+            transition: border-color 0.2s, box-shadow 0.2s;
+            outline: none;
+        }
+
+        input[type="email"]:focus,
+        textarea:focus {
+            border-color: var(--green-light);
+            box-shadow: 0 0 0 3px rgba(82, 183, 136, 0.15);
+        }
+
+        input[type="email"]::placeholder,
+        textarea::placeholder {
+            color: #aaa;
+        }
+
+        textarea {
+            resize: vertical;
+            min-height: 100px;
+        }
+
+        .checkbox-group {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.6rem;
+            margin: 1.5rem 0;
+            cursor: pointer;
+        }
+
+        .checkbox-group input[type="checkbox"] {
+            width: 18px;
+            height: 18px;
+            margin-top: 2px;
+            accent-color: var(--green-mid);
+            cursor: pointer;
+            flex-shrink: 0;
+        }
+
+        .checkbox-group span {
+            font-size: 0.88rem;
+            color: var(--text-muted);
+            line-height: 1.5;
+        }
+
+        .submit-btn {
+            width: 100%;
+            padding: 0.85rem;
+            background: var(--red-soft);
+            color: var(--white);
+            border: none;
+            border-radius: 8px;
+            font-family: 'DM Sans', sans-serif;
+            font-size: 0.95rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.2s, transform 0.1s;
+            letter-spacing: 0.01em;
+        }
+
+        .submit-btn:hover {
+            background: #c03030;
+        }
+
+        .submit-btn:active {
+            transform: scale(0.99);
+        }
+
+        .submit-btn:disabled {
+            background: #ccc;
+            cursor: not-allowed;
+        }
+
+        /* Success State */
+        .success-message {
+            display: none;
+            text-align: center;
+            padding: 2rem 1rem;
+        }
+
+        .success-message .check-icon {
+            width: 64px;
+            height: 64px;
+            background: var(--green-pale);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.25rem;
+            font-size: 1.8rem;
+        }
+
+        .success-message h2 {
+            font-family: 'DM Serif Display', serif;
+            font-size: 1.4rem;
+            font-weight: 400;
+            color: var(--green-dark);
+            margin-bottom: 0.6rem;
+        }
+
+        .success-message p {
+            color: var(--text-muted);
+            font-size: 0.92rem;
+            line-height: 1.6;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 1.5rem;
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            border-top: 1px solid var(--cream-dark);
+        }
+
+        footer a {
+            color: var(--green-mid);
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Mobile tweaks */
+        @media (max-width: 480px) {
+            main {
+                padding: 2rem 1.25rem 2.5rem;
+            }
+            .page-title {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="logo-icon">🌱</div>
+    <h1>GardenMate</h1>
+</header>
+
+<main>
+    <div id="formSection">
+        <h2 class="page-title">Konto löschen</h2>
+        <p class="page-subtitle">
+            Du möchtest dein GardenMate-Konto und alle damit verbundenen Daten löschen? 
+            Fülle bitte das folgende Formular aus. Wir bearbeiten deine Anfrage innerhalb von 7 Werktagen.
+        </p>
+
+        <div class="warning-box">
+            <h3>⚠ Bitte beachten</h3>
+            <ul>
+                <li>Alle deine Gärten, Beete und Pflanzenscans werden unwiderruflich gelöscht</li>
+                <li>Dein Abo wird automatisch gekündigt</li>
+                <li>Dieser Vorgang kann nicht rückgängig gemacht werden</li>
+            </ul>
+        </div>
+
+        <div class="info-box">
+            <h3>Datenschutz</h3>
+            <p>Gemäß DSGVO Art. 17 hast du das Recht auf Löschung deiner personenbezogenen Daten. 
+               Nach der Löschung werden alle Daten von unseren Servern entfernt.</p>
+        </div>
+
+        <form id="deleteForm" onsubmit="handleSubmit(event)">
+            <div class="form-group">
+                <label for="email">E-Mail-Adresse deines Kontos <span class="required">*</span></label>
+                <input type="email" id="email" name="email" required 
+                       placeholder="deine@email.de">
+            </div>
+
+            <div class="form-group">
+                <label for="reason">Grund für die Löschung (optional)</label>
+                <textarea id="reason" name="reason" 
+                          placeholder="Dein Feedback hilft uns, GardenMate zu verbessern..."></textarea>
+            </div>
+
+            <label class="checkbox-group">
+                <input type="checkbox" id="confirm" required>
+                <span>Ich bestätige, dass ich mein GardenMate-Konto und alle damit verbundenen Daten 
+                      unwiderruflich löschen möchte.</span>
+            </label>
+
+            <button type="submit" class="submit-btn" id="submitBtn">
+                Konto-Löschung beantragen
+            </button>
+        </form>
+    </div>
+
+    <div class="success-message" id="successSection">
+        <div class="check-icon">✓</div>
+        <h2>Anfrage gesendet</h2>
+        <p>Deine Löschanfrage wurde erfolgreich übermittelt. 
+           Wir werden dein Konto innerhalb von 7 Werktagen löschen und dich per E-Mail benachrichtigen.</p>
+    </div>
+</main>
+
+<footer>
+    <p>GardenMate &copy; 2026 · Kontakt: <a href="mailto:marc.stellmacher@web.de">marc.stellmacher@web.de</a></p>
+</footer>
+
+<script>
+    function handleSubmit(e) {
+        e.preventDefault();
+
+        const email = document.getElementById('email').value;
+        const reason = document.getElementById('reason').value;
+        const subject = encodeURIComponent('GardenMate Konto-Löschung: ' + email);
+        const body = encodeURIComponent(
+            'Löschanfrage für GardenMate-Konto\n\n' +
+            'E-Mail: ' + email + '\n' +
+            'Grund: ' + (reason || 'Kein Grund angegeben') + '\n\n' +
+            'Bitte lösche mein Konto und alle damit verbundenen Daten.'
+        );
+
+        // Open mailto link
+        window.location.href = 'mailto:marc.stellmacher@web.de?subject=' + subject + '&body=' + body;
+
+        // Show success message
+        document.getElementById('formSection').style.display = 'none';
+        document.getElementById('successSection').style.display = 'block';
+    }
+</script>
+
+</body>
+</html>
