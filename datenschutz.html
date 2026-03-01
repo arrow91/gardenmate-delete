@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GardenMate – Datenschutzerklärung</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=DM+Serif+Display&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --green-dark: #1a3a2a;
+            --green-mid: #2d6a4f;
+            --green-light: #52b788;
+            --green-pale: #d8f3dc;
+            --cream: #f8f6f0;
+            --cream-dark: #ede9e0;
+            --text: #1a2e1a;
+            --text-muted: #5a6e5a;
+            --white: #ffffff;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'DM Sans', sans-serif;
+            background: var(--cream);
+            color: var(--text);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        header {
+            background: var(--green-dark);
+            padding: 1.25rem 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .logo-icon {
+            width: 36px;
+            height: 36px;
+            background: var(--green-light);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+        }
+
+        header h1 {
+            font-family: 'DM Serif Display', serif;
+            color: var(--white);
+            font-size: 1.35rem;
+            font-weight: 400;
+            letter-spacing: 0.02em;
+        }
+
+        main {
+            flex: 1;
+            max-width: 680px;
+            width: 100%;
+            margin: 0 auto;
+            padding: 2.5rem 1.5rem 3rem;
+        }
+
+        .page-title {
+            font-family: 'DM Serif Display', serif;
+            font-size: 1.75rem;
+            font-weight: 400;
+            color: var(--green-dark);
+            margin-bottom: 0.4rem;
+        }
+
+        .last-updated {
+            color: var(--text-muted);
+            font-size: 0.85rem;
+            margin-bottom: 2rem;
+        }
+
+        h2 {
+            font-family: 'DM Serif Display', serif;
+            font-size: 1.2rem;
+            font-weight: 400;
+            color: var(--green-dark);
+            margin-top: 2rem;
+            margin-bottom: 0.6rem;
+            padding-bottom: 0.35rem;
+            border-bottom: 1.5px solid var(--green-pale);
+        }
+
+        h3 {
+            font-size: 0.95rem;
+            font-weight: 600;
+            color: var(--green-mid);
+            margin-top: 1.25rem;
+            margin-bottom: 0.35rem;
+        }
+
+        p, li {
+            font-size: 0.92rem;
+            line-height: 1.7;
+            color: var(--text);
+            margin-bottom: 0.5rem;
+        }
+
+        ul {
+            padding-left: 1.25rem;
+            margin-bottom: 0.75rem;
+        }
+
+        li {
+            margin-bottom: 0.3rem;
+        }
+
+        .info-box {
+            background: var(--green-pale);
+            border-left: 3px solid var(--green-mid);
+            border-radius: 0 8px 8px 0;
+            padding: 1rem 1.25rem;
+            margin: 1.25rem 0;
+        }
+
+        .info-box p {
+            font-size: 0.88rem;
+            color: var(--green-dark);
+            margin-bottom: 0;
+        }
+
+        a {
+            color: var(--green-mid);
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 0.75rem 0 1rem;
+            font-size: 0.88rem;
+        }
+
+        th, td {
+            text-align: left;
+            padding: 0.6rem 0.75rem;
+            border-bottom: 1px solid var(--cream-dark);
+        }
+
+        th {
+            background: var(--green-pale);
+            color: var(--green-dark);
+            font-weight: 600;
+            font-size: 0.82rem;
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
+        }
+
+        td {
+            color: var(--text);
+        }
+
+        footer {
+            text-align: center;
+            padding: 1.5rem;
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            border-top: 1px solid var(--cream-dark);
+        }
+
+        footer a {
+            color: var(--green-mid);
+        }
+
+        @media (max-width: 480px) {
+            main { padding: 2rem 1.25rem 2.5rem; }
+            .page-title { font-size: 1.5rem; }
+            table { font-size: 0.82rem; }
+            th, td { padding: 0.5rem; }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="logo-icon">🌱</div>
+    <h1>GardenMate</h1>
+</header>
+
+<main>
+    <h1 class="page-title">Datenschutzerklärung</h1>
+    <p class="last-updated">Stand: 1. März 2026</p>
+
+    <div class="info-box">
+        <p>Der Schutz deiner Daten ist uns wichtig. Diese Datenschutzerklärung informiert dich darüber, welche personenbezogenen Daten wir in der App „GardenMate" erheben, wofür wir sie nutzen und welche Rechte du hast.</p>
+    </div>
+
+    <h2>1. Verantwortlicher</h2>
+    <p>
+        Marc Stellmacher<br>
+        E-Mail: <a href="mailto:marc.stellmacher@web.de">marc.stellmacher@web.de</a>
+    </p>
+    <p>Für Fragen zum Datenschutz erreichst du mich jederzeit unter der oben genannten E-Mail-Adresse.</p>
+
+    <h2>2. Welche Daten wir erheben</h2>
+
+    <h3>2.1 Kontodaten</h3>
+    <p>Bei der Registrierung erheben wir deine E-Mail-Adresse und ein selbst gewähltes Passwort. Dein Passwort wird ausschließlich verschlüsselt (gehasht) gespeichert. Zusätzlich wird automatisch eine eindeutige Nutzer-ID erzeugt.</p>
+
+    <h3>2.2 Nutzungsdaten (App-Inhalte)</h3>
+    <p>Alle Inhalte, die du in der App erstellst, werden gespeichert, damit du sie geräteübergreifend nutzen kannst:</p>
+    <ul>
+        <li>Gärten, Beete und deren Konfiguration</li>
+        <li>Pflanzenscans und Scan-Ergebnisse</li>
+        <li>Einstellungen und Präferenzen</li>
+    </ul>
+
+    <h3>2.3 Standortdaten</h3>
+    <p>Wenn du die Wetterfunktion nutzt, wird dein ungefährer Standort abgefragt, um lokale Wetterdaten bereitzustellen. Der Standort wird nur bei aktiver Nutzung abgefragt und nicht dauerhaft gespeichert.</p>
+
+    <h3>2.4 Kameradaten</h3>
+    <p>Für den KI-Pflanzenscanner kannst du Fotos aufnehmen oder aus der Galerie auswählen. Die Bilder werden zur Analyse an einen KI-Dienst (Anthropic Claude Vision API) übertragen. Bilder werden nicht dauerhaft auf unseren Servern gespeichert.</p>
+
+    <h3>2.5 Zahlungsdaten</h3>
+    <p>Zahlungen für Abonnements werden ausschließlich über Google Play (In-App-Käufe) abgewickelt. Wir haben keinen Zugriff auf deine Zahlungsdaten wie Kreditkartennummern. Die Aboverwaltung erfolgt über den Dienst RevenueCat.</p>
+
+    <h3>2.6 Werbedaten</h3>
+    <p>In der kostenlosen Version der App werden Werbeanzeigen über Google AdMob eingeblendet. AdMob kann dabei Daten wie die Werbe-ID deines Geräts, ungefähre Standortinformationen und Interaktionen mit Anzeigen erheben.</p>
+
+    <h2>3. Zweck der Datenverarbeitung</h2>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Daten</th>
+                <th>Zweck</th>
+                <th>Rechtsgrundlage</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>E-Mail, Passwort</td>
+                <td>Registrierung, Anmeldung, Passwort-Reset</td>
+                <td>Art. 6 Abs. 1 lit. b DSGVO (Vertragserfüllung)</td>
+            </tr>
+            <tr>
+                <td>Nutzer-ID</td>
+                <td>Zuordnung deiner Daten, Kontoverwaltung</td>
+                <td>Art. 6 Abs. 1 lit. b DSGVO</td>
+            </tr>
+            <tr>
+                <td>App-Inhalte</td>
+                <td>Bereitstellung der App-Funktionen</td>
+                <td>Art. 6 Abs. 1 lit. b DSGVO</td>
+            </tr>
+            <tr>
+                <td>Standort</td>
+                <td>Lokale Wetterdaten</td>
+                <td>Art. 6 Abs. 1 lit. a DSGVO (Einwilligung)</td>
+            </tr>
+            <tr>
+                <td>Kamerabilder</td>
+                <td>KI-Pflanzenerkennung</td>
+                <td>Art. 6 Abs. 1 lit. a DSGVO (Einwilligung)</td>
+            </tr>
+            <tr>
+                <td>Zahlungsdaten</td>
+                <td>Abo-Verwaltung</td>
+                <td>Art. 6 Abs. 1 lit. b DSGVO</td>
+            </tr>
+            <tr>
+                <td>Werbe-ID</td>
+                <td>Anzeige von Werbung</td>
+                <td>Art. 6 Abs. 1 lit. a DSGVO (Einwilligung)</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h2>4. Drittanbieter und Datenübermittlung</h2>
+    <p>Zur Bereitstellung der App-Funktionen nutzen wir folgende Drittanbieter:</p>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Dienst</th>
+                <th>Anbieter</th>
+                <th>Zweck</th>
+                <th>Serverstandort</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Supabase</td>
+                <td>Supabase Inc., USA</td>
+                <td>Authentifizierung, Datenbank</td>
+                <td>EU (Frankfurt)</td>
+            </tr>
+            <tr>
+                <td>Claude Vision API</td>
+                <td>Anthropic, USA</td>
+                <td>KI-Pflanzenerkennung</td>
+                <td>USA</td>
+            </tr>
+            <tr>
+                <td>Open-Meteo</td>
+                <td>Open-Meteo, Open Source</td>
+                <td>Wetterdaten</td>
+                <td>EU</td>
+            </tr>
+            <tr>
+                <td>RevenueCat</td>
+                <td>RevenueCat Inc., USA</td>
+                <td>Abo-Verwaltung</td>
+                <td>USA</td>
+            </tr>
+            <tr>
+                <td>Google AdMob</td>
+                <td>Google LLC, USA</td>
+                <td>Werbeanzeigen</td>
+                <td>USA</td>
+            </tr>
+            <tr>
+                <td>Google Play</td>
+                <td>Google LLC, USA</td>
+                <td>In-App-Käufe</td>
+                <td>USA</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <p>Bei der Übermittlung von Daten in die USA stellen wir sicher, dass angemessene Schutzmaßnahmen getroffen werden, insbesondere durch Standardvertragsklauseln (SCCs) gemäß Art. 46 Abs. 2 lit. c DSGVO.</p>
+
+    <h2>5. Datensicherheit</h2>
+    <p>Alle Datenübertragungen erfolgen verschlüsselt über HTTPS/TLS. Passwörter werden gehasht gespeichert und sind für uns nicht einsehbar. Der Zugriff auf deine Daten ist durch Row Level Security auf Datenbankebene geschützt, sodass nur du auf deine eigenen Daten zugreifen kannst.</p>
+
+    <h2>6. Speicherdauer</h2>
+    <p>Deine Daten werden gespeichert, solange dein Konto besteht. Nach Löschung deines Kontos werden alle personenbezogenen Daten innerhalb von 30 Tagen vollständig von unseren Servern entfernt. Kamerabilder für den Pflanzenscanner werden nur vorübergehend zur Analyse übermittelt und nicht dauerhaft gespeichert.</p>
+
+    <h2>7. Deine Rechte</h2>
+    <p>Gemäß DSGVO stehen dir folgende Rechte zu:</p>
+    <ul>
+        <li><strong>Auskunft</strong> (Art. 15) – Du kannst jederzeit erfahren, welche Daten wir über dich gespeichert haben.</li>
+        <li><strong>Berichtigung</strong> (Art. 16) – Du kannst die Korrektur unrichtiger Daten verlangen.</li>
+        <li><strong>Löschung</strong> (Art. 17) – Du kannst die Löschung deiner Daten verlangen. Nutze dazu unsere <a href="index.html">Konto-Löschseite</a> oder schreibe uns eine E-Mail.</li>
+        <li><strong>Einschränkung</strong> (Art. 18) – Du kannst die Einschränkung der Verarbeitung verlangen.</li>
+        <li><strong>Datenübertragbarkeit</strong> (Art. 20) – Du kannst deine Daten in einem gängigen Format erhalten.</li>
+        <li><strong>Widerspruch</strong> (Art. 21) – Du kannst der Verarbeitung widersprechen.</li>
+        <li><strong>Widerruf der Einwilligung</strong> – Erteilte Einwilligungen (z.B. Standort, Kamera) kannst du jederzeit in den Geräteeinstellungen widerrufen.</li>
+    </ul>
+    <p>Außerdem hast du das Recht, dich bei einer Datenschutz-Aufsichtsbehörde zu beschweren.</p>
+
+    <h2>8. Kinder</h2>
+    <p>GardenMate richtet sich nicht an Kinder unter 16 Jahren. Wir erheben wissentlich keine Daten von Kindern unter 16 Jahren. Sollten wir Kenntnis davon erlangen, löschen wir diese Daten umgehend.</p>
+
+    <h2>9. Änderungen</h2>
+    <p>Wir behalten uns vor, diese Datenschutzerklärung bei Bedarf anzupassen, z.B. bei neuen Funktionen oder geänderten rechtlichen Anforderungen. Die aktuelle Fassung ist stets in der App und auf dieser Seite abrufbar.</p>
+
+    <h2>10. Kontakt</h2>
+    <p>Bei Fragen zum Datenschutz wende dich an:</p>
+    <p>
+        Marc Stellmacher<br>
+        E-Mail: <a href="mailto:marc.stellmacher@web.de">marc.stellmacher@web.de</a>
+    </p>
+</main>
+
+<footer>
+    <p>GardenMate &copy; 2026 · <a href="index.html">Konto löschen</a> · Kontakt: <a href="mailto:marc.stellmacher@web.de">marc.stellmacher@web.de</a></p>
+</footer>
+
+</body>
+</html>
